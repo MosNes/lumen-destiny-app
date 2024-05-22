@@ -29,4 +29,10 @@ app.use(cors({origin: true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+//add routes
+//test route
+app.get("/", (req, res) => {
+    res.send("Hello from Firebase!");
+});
+
 export const api = onRequest(app);
